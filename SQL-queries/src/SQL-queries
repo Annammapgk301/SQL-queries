@@ -1,0 +1,1800 @@
+Interview Questions on SQL are based on following two tables, Employee Table and Employee Incentive Table.
+Table Name : Employee EMP_ID As PRIMARY KEY
+EMPLOYEE_ID	FIRST_NAME	LAST_NAME	SALARY	JOINING_DATE	DEPARTMENT
+1	Venkatesh	S	100000	08/28/2015	 BANKING
+2	Ragavi	P	75000	08/28/2015	BUSINESS
+3	Gopinath	C	50000	03/02/2016	PHARMA
+4	Dinesh	G	50000	03/02/2016	INSURANCE
+5	Saibabu	E	40000	07/08/2017	SOFTWARE
+6	Hasan	S	29000	07/08/2017	MANUFACTURING
+7	Divya	P	33000	07/08/2017	HEALTHCARE
+8	Aravindan	R	40000	07/08/2017	HEALTHCARE
+9	Sathish	MD	45000	03/02/2016	AUTOMOBILE
+10	Prasanth	PKP	34000	03/02/2016	INSURANCE
+11	Vijay	R	25684	03/02/2016	BUSINESS
+12	Sivakumar	K	54789	03/02/2016	SOFTWARE
+
+Table Name : Incentives
+
+EMPLOYEE_REF_ID	INCENTIVE_DATE	INCENTIVE_AMOUNT
+1	01-FEB-16	5000
+2	01-FEB-16	3000
+3	01-FEB-17	4000
+1	01-JAN-17	4500
+2	01-JAN-17	3500
+
+
+SQL Queries Interview Questions and Answers on "SQL Select" - Examples
+1.	Get all employee details from the employee table
+2.	SELECT * From employee3;
+
+Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 
+  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 
+  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 
+  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 
+  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 
+  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 
+  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 
+  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 
+  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 
+  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 
+  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 
+  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+ 
+  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+
+3.	Get First_Name,Last_Name from employee table
+4.	SELECT First_Name,Last_Name FROM employee3;
+
+First_Name
+Lst_Name
+
+ 
+  Edit
+  Copy
+  Delete
+Venkatesh	S
+ 
+  Edit
+  Copy
+  Delete
+Raghavi	P
+ 
+  Edit
+  Copy
+  Delete
+Gopinath	C
+ 
+  Edit
+  Copy
+  Delete
+Dinesh	G
+ 
+  Edit
+  Copy
+  Delete
+Saibabu	E
+ 
+  Edit
+  Copy
+  Delete
+Hasan	S
+ 
+  Edit
+  Copy
+  Delete
+Divya	P
+ 
+  Edit
+  Copy
+  Delete
+Aravindhan	R
+ 
+  Edit
+  Copy
+  Delete
+Sathish	MD
+ 
+  Edit
+  Copy
+  Delete
+Prasanth	PKP
+ 
+  Edit
+  Copy
+  Delete
+Vijay	R
+ 
+  Edit
+  Copy
+  Delete
+Sivakumar	K
+5.	
+3. Get First_Name from employee table using alias name “Employee Name”
+SELECT First_Name  AS “Dinesh" FROM employee3;
+
+			
+
+Dinesh
+
+ 
+  Edit
+  Copy
+  Delete
+Venkatesh
+ 
+  Edit
+  Copy
+  Delete
+Raghavi
+ 
+  Edit
+  Copy
+  Delete
+Gopinath
+ 
+  Edit
+  Copy
+  Delete
+Dinesh
+ 
+  Edit
+  Copy
+  Delete
+Saibabu
+ 
+  Edit
+  Copy
+  Delete
+Hasan
+ 
+  Edit
+  Copy
+  Delete
+Divya
+ 
+  Edit
+  Copy
+  Delete
+Aravindhan
+ 
+  Edit
+  Copy
+  Delete
+Sathish
+ 
+  Edit
+  Copy
+  Delete
+Prasanth
+ 
+  Edit
+  Copy
+  Delete
+Vijay
+ 
+  Edit
+  Copy
+  Delete
+Sivakumar
+
+
+
+
+
+4. Get First_Name from employee table in upper case
+SELECT UPPER(First_Name) FROM Employee3;
+
+UPPER(First_Name)
+
+VENKATESH	
+RAGHAVI	
+GOPINATH	
+DINESH	
+SAIBABU	
+HASAN	
+DIVYA	
+ARAVINDHAN	
+SATHISH	
+PRASANTH	
+VIJAY	
+SIVAKUMAR	
+
+6.	Get First_Name from employee table in lower case
+7.	SELECT LOWER(First_Name) FROM Employee3;
+
+LOWER(First_Name)
+
+venkatesh	
+raghavi	
+gopinath	
+dinesh	
+saibabu	
+hasan	
+divya	
+aravindhan	
+sathish	
+prasanth	
+vijay	
+sivakumar	
+8.	
+6. Get unique DEPARTMENT from employee table
+SELECT DISTINCT department 
+	FROM employee3;
+
+ 	Department
+
+ 	  Edit
+  Copy
+  Delete
+Banking
+ 	  Edit
+  Copy
+  Delete
+Business
+ 	  Edit
+  Copy
+  Delete
+Pharma
+ 	  Edit
+  Copy
+  Delete
+Insurance
+ 	  Edit
+  Copy
+  Delete
+Software
+ 	  Edit
+  Copy
+  Delete
+Manufacturing
+ 	  Edit
+  Copy
+  Delete
+Healthcare
+ 	  Edit
+  Copy
+  Delete
+Automobile
+
+7. Select first 3 characters of FIRST_NAME from EMPLOYEE
+SELECT SUBSTRING(First_Name,1,3) 
+     FROM employee3;
+
+SUBSTRING(First_Name,1,3)   1
+
+Ara	
+Din	
+Div	
+Gop	
+Has	
+Pra	
+Rag	
+Sai	
+Sat	
+Siv	
+Ven	
+Vij	
+
+9.	Get position of 'a' in name 'ragavi' from employee table
+10.	SELECT POSITION("a" IN "raghavi") AS MatchPosition;
+MatchPosition	
+2	
+11.	
+9. Get FIRST_NAME from employee table after removing white spaces from right side
+SELECT RTRIM(First_Name) 
+    FROM employee3;
+
+RTRIM(First_Name)
+
+Venkatesh	
+Raghavi	
+Gopinath	
+Dinesh	
+Saibabu	
+Hasan	
+Divya	
+Aravindhan	
+Sathish	
+Prasanth	
+Vijay	
+Sivakumar	
+
+	
+	
+10. Get FIRST_NAME from employee table after removing white spaces from left side
+SELECT LTRIM(First_Name) 
+    FROM employee3;
+
+LTRIM(First_Name)
+
+Venkatesh	
+Raghavi	
+Gopinath	
+Dinesh	
+Saibabu	
+Hasan	
+Divya	
+Aravindhan	
+Sathish	
+Prasanth	
+Vijay	
+Sivakumar	
+
+12.	Get length of FIRST_NAME from employee table
+SELECT First_Name LENGTH(First_Name)
+1.	    FROM employee3;
+LENGTH(First_Name)
+
+9	
+7	
+8	
+6	
+7	
+5	
+5	
+10	
+7	
+8	
+5	
+9	
+2.	
+13.	Get First_Name from employee table after replacing 'a' with '$'
+14.	select REPLACE(First_Name,'a','$') from employee3;
+15.	
+16.	
+REPLACE(First_Name,'a','$')
+
+Venk$tesh	
+R$gh$vi	
+Gopin$th	
+Dinesh	
+S$ib$bu	
+H$s$n	
+Divy$	
+Ar$vindh$n	
+S$thish	
+Pr$s$nth	
+Vij$y	
+Siv$kum$r	
+17.	
+13. Get First_Name and Last_Name as single column from employee table separated by a '_'
+SELECT concat(First_Name ,'_',Lst_Name) from employee3
+
+concat(First_Name ,'_',Lst_Name)
+
+Venkatesh_S	
+Raghavi_P	
+Gopinath_C	
+Dinesh_G	
+Saibabu_E	
+Hasan_S	
+Divya_P	
+Aravindhan_R	
+Sathish_MD	
+Prasanth_PKP	
+Vijay_R	
+Sivakumar_K	
+
+
+14. Get FIRST_NAME ,Joining year,Joining Month and Joining Date from employee table
+	select year(Joining_date),month(Joining_date),day(Joining_date) From employee3;
+
+year(Joining_date)
+month(Joining_date)
+day(Joining_date)
+
+2018	9	13	
+2018	10	4	
+2019	12	13	
+2019	7	9	
+2019	12	4	
+2019	5	14	
+2019	10	2	
+2019	9	17	
+2019	6	5	
+2019	4	3	
+2018	9	14	
+2019	11	19	
+15. Get all employee details from the employee table order by First_Name Ascending
+SELECT * 
+	FROM employee3 
+	ORDER BY First_Name ASC;
+
+ 	Emp_id
+First_Name   1
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+
+
+16. Get all employee details from the employee table order by First_Name descending
+SELECT * 
+	FROM employee3 
+	ORDER BY First_Name DESC;
+
+ 	Emp_id
+First_Name   1
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+
+17.Get all employee details from the employee table order by First_Name Ascending and Salary descending
+
+Select * from employee3 order by First_Name asc,Salary desc;
+ 	Emp_id
+First_Name   1
+Lst_Name
+Salary   2
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+
+18.	Get employee details from employee table whose employee name is “Dinesh”
+19.	Select * from EMPLOYEE3 where First_Name = 'Dinesh'
+20.	
+ 	Emp_id	First_Name	Lst_Name	Salary	Joining_date	Department
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+21.	
+19. Get employee details from employee table whose employee name are “Dinesh” and “Roy”
+Select * from EMPLOYEE3 where First_Name in ('Dinesh','Roy')
+
+ 	Emp_id	First_Name	Lst_Name	Salary	Joining_date	Department
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+
+20. Get employee details from employee table whose employee name are not “Dinesh” and “Roy”
+Select * from EMPLOYEE3 where First_Name not in ('Dinesh','Roy');
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+
+21.Get employee details from employee table whose first name starts with 's'
+22.	Select * from EMPLOYEE3 where First_Name like 'S%';
+23.	
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+24.	
+22. Get employee details from employee table whose first name contains 'v'
+Select * from EMPLOYEE3 where First_Name like '%v%'
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+
+23. Get employee details from employee table whose first name ends with 'n'
+Select * from EMPLOYEE3 where First_Name like '%n'
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+
+24. Get employee details from employee table whose first name ends with 'n' and name contains 4 letters
+Select * from EMPLOYEE3 where First_Name like '___n'
+
+
+
+ 	Emp_id	First_Name	Lst_Name	Salary	Joining_date	Department
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+
+
+
+25.	Get employee details from employee table whose first name starts with 'J' and name contains 4 letters
+	Select * from employee3 where First_Name like 'P_______'
+ 	Emp_id	First_Name	Lst_Name	Salary	Joining_date	Department
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+
+26.	Get employee details from employee table who’s Salary greater than 60000
+Select * from employee3  where Salary > 60000
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+
+27.	Get employee details from employee table who’s Salary less than 80000
+SELECT * from EMPLOYEE3 where Salary < 80000
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+
+28.Get employee details from employee table who’s Salary between 50000 and 80000
+Select * from EMPLOYEE3 where Salary between 50000 and 80000
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+
+28.	Get employee details from employee table whose name is venkatesh and ragavi
+29.	Select * from EMPLOYEE3 where FIRST_NAME in ('Venkatesh','Raghavi')
+30.	
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+
+31.	Get employee details from employee table whose joining year is “2015”
+Select * from EMPLOYEE3 where
+year(Joining_date) = '2018'
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+
+32.	Get employee details from employee table whose joining month is “January”
+Select * from EMPLOYEE3 where
+month(Joining_date) = '09'
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+
+
+33.	Get employee details from employee table who joined before January 1st 2017
+Select * from
+EMPLOYEE3 where Joining_date < '2019-01-01'
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+
+34.	Get employee details from employee table who joined after January 31st 2016
+Select * from EMPLOYEE3 where Joining_date > '2013-01-31'
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+
+35.	Get Joining Date and Time from employee table
+Select
+CONVERT(DATE_FORMAT(Joining_date,'%Y-%m-%d-
+%H:%i:00'),DATETIME) from EMPLOYEE3
+
+CONVERT(DATE_FORMAT(Joining_date,'%Y-%m-%d- %H:%i:00'),DATETIME)
+
+2018-09-13 00:00:00	
+2018-10-04 00:00:00	
+2019-12-13 00:00:00	
+2019-07-09 00:00:00	
+2019-12-04 00:00:00	
+2019-05-14 00:00:00	
+2019-10-02 00:00:00	
+2019-09-17 00:00:00	
+2019-06-05 00:00:00	
+2019-04-03 00:00:00	
+2018-09-14 00:00:00	
+2019-11-19 00:00:00	
+
+36.	Get Joining Date,Time including milliseconds from employee table
+Select MICROSECOND(Joining_date) from
+EMPLOYEE3
+
+MICROSECOND(Joining_date)
+
+0	
+0	
+0	
+0	
+0	
+0	
+0	
+0	
+0	
+0	
+0	
+0	
+
+37.	Get difference between JOINING_DATE and INCENTIVE_DATE from employee and incentives table
+Select First_Name,Incentive_Date - Joining_Date from employee3 a inner join emp1 B on A.Emp_id = B.EMP_REF_ID
+First_Name
+Incentive_Date - Joining_Date
+
+Venkatesh	-20712	
+Raghavi	-30893	
+Gopinath	-31109	
+Venkatesh	-10707	
+Raghavi	-596	
+
+38.	Get database date
+select now()
+
+now()	
+2019-11-30 11:53:52	
+
+39.	Get names of employees from employee table who has '%' in Last_Name. Tip : Escape character for special characters in a query.
+Select FIRST_NAME from employee where
+Lst_Name like '%\%%'
+
+First_Name
+
+40.	Get Last Name from employee table after replacing special character with white space
+Select REPLACE(Lst_Name,'%',' ') from employee3
+
+REPLACE(Lst_Name,'%',' ')
+
+S	
+P	
+C	
+G	
+E	
+S	
+P	
+R	
+MD	
+PKP	
+R	
+K	
+
+41.	Get department,total salary with respect to a department from employee table.
+Select Department,sum(Salary) Total_Salary from employee3 group by Department
+
+ 	Department
+Total_Salary
+
+ 	  Edit
+  Copy
+  Delete
+Automobile	33000
+ 	  Edit
+  Copy
+  Delete
+Banking	100000
+ 	  Edit
+  Copy
+  Delete
+Business	100684
+ 	  Edit
+  Copy
+  Delete
+Healthcare	73000
+ 	  Edit
+  Copy
+  Delete
+Insurance	84000
+ 	  Edit
+  Copy
+  Delete
+Manufacturing	29000
+ 	  Edit
+  Copy
+  Delete
+Pharma	50000
+ 	  Edit
+  Copy
+  Delete
+Software	94789
+
+42. Get department,total salary with respect to a department from employee table order by total salary descending
+Select Department,sum(Salary) Total_Salary from employee3 group by Department order by Total_Salary desc
+
+ 	Department
+Total_Salary   1
+
+ 	  Edit
+  Copy
+  Delete
+Business	100684
+ 	  Edit
+  Copy
+  Delete
+Banking	100000
+ 	  Edit
+  Copy
+  Delete
+Software	94789
+ 	  Edit
+  Copy
+  Delete
+Insurance	84000
+ 	  Edit
+  Copy
+  Delete
+Healthcare	73000
+ 	  Edit
+  Copy
+  Delete
+Pharma	50000
+ 	  Edit
+  Copy
+  Delete
+Automobile	33000
+ 	  Edit
+  Copy
+  Delete
+Manufacturing	29000
+
+42.	Get department,no of employees in a department,total salary with respect to a department from employee table order by total salary descending
+Select Department,count(First_Name),sum(Salary) Total_Salary from employee3 group by Department order by Total_Salary desc
+
+ 	Department
+count(First_Name)
+Total_Salary   1
+
+ 	  Edit
+  Copy
+  Delete
+Business	2	100684
+ 	  Edit
+  Copy
+  Delete
+Banking	1	100000
+ 	  Edit
+  Copy
+  Delete
+Software	2	94789
+ 	  Edit
+  Copy
+  Delete
+Insurance	2	84000
+ 	  Edit
+  Copy
+  Delete
+Healthcare	2	73000
+ 	  Edit
+  Copy
+  Delete
+Pharma	1	50000
+ 	  Edit
+  Copy
+  Delete
+Automobile	1	33000
+ 	  Edit
+  Copy
+  Delete
+Manufacturing	1	29000
+
+43.	Get department wise average salary from employee table order by salary ascending
+select Department,avg(Salary) AvgSalary from employee3 group by Department order by AvgSalary asc
+
+
+ 	Department
+AvgSalary   1
+
+ 	  Edit
+  Copy
+  Delete
+Manufacturing	29000.0000
+ 	  Edit
+  Copy
+  Delete
+Automobile	33000.0000
+ 	  Edit
+  Copy
+  Delete
+Healthcare	36500.0000
+ 	  Edit
+  Copy
+  Delete
+Insurance	42000.0000
+ 	  Edit
+  Copy
+  Delete
+Software	47394.5000
+ 	  Edit
+  Copy
+  Delete
+Pharma	50000.0000
+ 	  Edit
+  Copy
+  Delete
+Business	50342.0000
+ 	  Edit
+  Copy
+  Delete
+Banking	100000.0000
+
+44.	Get department wise maximum salary from employee table order by salary ascending
+select Department,max(Salary) MaxSalary from employee3 group by Department order by MaxSalary asc
+
+ 	Department
+MaxSalary   1
+
+ 	  Edit
+  Copy
+  Delete
+Manufacturing	29000
+ 	  Edit
+  Copy
+  Delete
+Automobile	33000
+ 	  Edit
+  Copy
+  Delete
+Healthcare	40000
+ 	  Edit
+  Copy
+  Delete
+Pharma	50000
+ 	  Edit
+  Copy
+  Delete
+Insurance	50000
+ 	  Edit
+  Copy
+  Delete
+Software	54789
+ 	  Edit
+  Copy
+  Delete
+Business	75000
+ 	  Edit
+  Copy
+  Delete
+Banking	100000
+
+45.	Get department wise minimum salary from employee table order by salary ascending
+select Department,min(Salary) MinSalary from employee3 group by DEPARTMENT order by MinSalary asc
+
+
+ 	Department
+MinSalary   1
+
+ 	  Edit
+  Copy
+  Delete
+Business	25684
+ 	  Edit
+  Copy
+  Delete
+Manufacturing	29000
+ 	  Edit
+  Copy
+  Delete
+Healthcare	33000
+ 	  Edit
+  Copy
+  Delete
+Automobile	33000
+ 	  Edit
+  Copy
+  Delete
+Insurance	34000
+ 	  Edit
+  Copy
+  Delete
+Software	40000
+ 	  Edit
+  Copy
+  Delete
+Pharma	50000
+ 	  Edit
+  Copy
+  Delete
+Banking	100000
+
+46.	Select no of employees joined with respect to year and month from employee table
+	select year (Joining_date) Join_Year,month (Joining_date) Join_Month,count(*) Total_Emp from employee3 group by year(Joining_date), month(Joining_date)
+
+Join_Year
+Join_Month
+Total_Emp
+
+2018	9	2	
+2018	10	1	
+2019	4	1	
+2019	5	1	
+2019	6	1	
+2019	7	1	
+2019	9	1	
+2019	10	1	
+2019	11	1	
+2019	12	2	
+
+48. Select department,total salary with respect to a department from employee table where total salary greater than 80000 order by Total_Salary descending
+Select Department,sum(Salary) Total_Salary from employee3 group by Department having sum(Salary) > 80000 order by Total_Salary desc
+
+ 	Department
+Total_Salary   1
+
+ 	  Edit
+  Copy
+  Delete
+Business	100684
+ 	  Edit
+  Copy
+  Delete
+Banking	100000
+ 	  Edit
+  Copy
+  Delete
+Software	94789
+ 	  Edit
+  Copy
+  Delete
+Insurance	84000
+
+
+49. Select first_name, incentive amount from employee and incentives table for those employees who have incentives
+	Select First_Name,Incentive_Amount from employee3 a inner join emp1 B on A.Emp_id = B.EMP_REF_ID
+
+First_Name
+Incentive_Amount
+
+Venkatesh	5000	
+Raghavi	3000	
+Gopinath	4000	
+Venkatesh	4500	
+Raghavi	3500	
+
+50. Select first_name, incentive amount from employee and incentives table for those employees who have incentives and incentive amount greater than 3000
+Select First_Name,incentive_Amount from employee3 a inner join emp1 B on A.EMP_id = B.EMP_REF_ID and Incentive_Amount > 3000
+
+First_Name
+incentive_Amount
+
+Venkatesh	5000	
+Gopinath	4000	
+Venkatesh	4500	
+Raghavi	3500	
+
+51. Select first_name, incentive amount from employee and incentives table for all employes even if they didn't get incentives
+Select First_Name,Incentive_Amount from employee3 a left join emp1 B on A.Emp_id = B.EMP_REF_ID
+
+First_Name
+Incentive_Amount
+
+Venkatesh	5000	
+Raghavi	3000	
+Gopinath	4000	
+Venkatesh	4500	
+Raghavi	3500	
+Dinesh	NULL	
+Saibabu	NULL	
+Hasan	NULL	
+Divya	NULL	
+Aravindhan	NULL	
+Sathish	NULL	
+Prasanth	NULL	
+Vijay	NULL	
+Sivakumar	NULL	
+
+
+52. Select first_name, incentive amount from employee and incentives table for all employees even if they didn't get incentives and set incentive amount as 0 for those employees who didn't get incentives.
+Select First_Name, IFNULL(Incentive_Amount,0) from employee3 a left join emp1 B on A.Emp_id = B.EMP_REF_ID
+
+First_Name
+IFNULL(Incentive_Amount,0)
+
+Venkatesh	5000	
+Raghavi	3000	
+Gopinath	4000	
+Venkatesh	4500	
+Raghavi	3500	
+Dinesh	0	
+Saibabu	0	
+Hasan	0	
+Divya	0	
+Aravindhan	0	
+Sathish	0	
+Prasanth	0	
+Vijay	0	
+Sivakumar	0	
+
+
+53. Select first_name, incentive amount from employee and incentives table for all employees who got incentives using left join
+Select First_Name, IFNULL(Incentive_Amount,0) from employee3 a right join emp1 B on A.EMP_id = B.EMP_REF_ID
+First_Name
+IFNULL(Incentive_Amount,0)
+
+Venkatesh	5000	
+Raghavi	3000	
+Gopinath	4000	
+Venkatesh	4500	
+Raghavi	3500	
+
+54. Select max incentive with respect to employee from employee and incentives table using sub query
+select Department,(select IFNULL (max(Incentive_Amount),0) from emp1 where EMP_REF_ID = Emp_id) Max_incentive from employee3
+Department
+Max_incentive
+
+Banking	5000	
+Business	3500	
+Pharma	4000	
+Insurance	0	
+Software	0	
+Manufacturing	0	
+Healthcare	0	
+Healthcare	0	
+Automobile	0	
+Insurance	0	
+Business	0	
+Software	0	
+
+55. Select TOP 2 salary from employee table
+	select * from employee3 order by Salary desc limit 2
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary   1
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+
+56. Select TOP N salary from employee table
+
+
+57. Select 2nd Highest salary from employee table
+select min(Salary) from (select * from employee3 order by Salary desc limit 2) a
+min(Salary)	
+75000	
+
+58. Select Nth Highest salary from employee table
+
+59. Select First_Name,LAST_NAME from employee table as separate rows
+select First_Name from EMPLOYEE3 union select LSt_Name from employee3
+
+
+
+	First_Name
+
+	Venkatesh	
+	Raghavi	
+	Gopinath	
+	Dinesh	
+	Saibabu	
+	Hasan	
+	Divya	
+	Aravindhan	
+	Sathish	
+	Prasanth	
+	Vijay	
+	Sivakumar	
+	S	
+	P	
+	C	
+	G	
+	E	
+	R	
+	MD	
+	PKP	
+	K	
+
+
+60. What is the difference between UNION and UNION ALL ?
+
+Both UNION and UNION ALL is used to select information from structurally similar tables. That means corresponding columns specified in
+the union should have same data type. For example, in the above query, if
+First_Name is DOUBLE and Last_Name is STRING above query
+wont work. Since the data type of both the columns are VARCHAR,
+union is made possible. Difference between UNION and UNION ALL is
+that , UNION query return only distinct values.
+
+
+61. Select employee details from employee table if data exists in incentive table ?
+select * from employee3 where exists (select * from emp1)
+
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+1	Venkatesh	S	100000	2018-09-13	Banking
+ 	  Edit
+  Copy
+  Delete
+2	Raghavi	P	75000	2018-10-04	Business
+ 	  Edit
+  Copy
+  Delete
+3	Gopinath	C	50000	2019-12-13	Pharma
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+
+62. How to fetch data that are common in two query results ?
+select * from employee3 where Emp_id INTERSECT select * from employee3 where EMP_id < 4
+
+Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+1	Venkatesh	S	100000	2018-09-13	Banking	
+2	Raghavi	P	75000	2018-10-04	Business	
+3	Gopinath	C	50000	2019-12-13	Pharma	
+
+63. Get Employee ID's of those employees who didn't receive incentives without using sub query ?
+
+64. Select 20 % of salary from venkat , 10% of Salary for gopi and for other 15 % of salary from employee table
+	SELECT First_Name, CASE First_Name WHEN 'venkatesh' THEN SALARY * .2 WHEN 'Gopinath' THEN Salary * .10 ELSE Salary * .15 END "Deduced_Amount" FROM employee3
+
+ 	First_Name
+Deduced_Amount
+
+ 	  Edit
+  Copy
+  Delete
+Venkatesh	20000.00
+ 	  Edit
+  Copy
+  Delete
+Raghavi	11250.00
+ 	  Edit
+  Copy
+  Delete
+Gopinath	5000.00
+ 	  Edit
+  Copy
+  Delete
+Dinesh	7500.00
+ 	  Edit
+  Copy
+  Delete
+Saibabu	6000.00
+ 	  Edit
+  Copy
+  Delete
+Hasan	4350.00
+ 	  Edit
+  Copy
+  Delete
+Divya	4950.00
+ 	  Edit
+  Copy
+  Delete
+Aravindhan	6000.00
+ 	  Edit
+  Copy
+  Delete
+Sathish	4950.00
+ 	  Edit
+  Copy
+  Delete
+Prasanth	5100.00
+ 	  Edit
+  Copy
+  Delete
+Vijay	3852.60
+ 	  Edit
+  Copy
+  Delete
+Sivakumar	8218.35
+
+
+65. Select Banking as 'Bank Dept', Insurance as 'Insurance Dept' and Services as 'Pharma Dept' from employee table
+SELECT case Department when 'Banking' then 'Bank Dept' when 'Insurance' then 'Insurance Dept' when 'pharmacy' then 'Pharma Dept' end FROM employee3
+
+case Department when 'Banking' then 'Bank Dept' when 'Insurance' then 'Insurance Dept' when 'pharmacy' then 'Pharma Dept' end
+
+Insurance Dept	
+NULL	
+NULL	
+NULL	
+NULL	
+NULL	
+Insurance Dept	
+NULL	
+NULL	
+
+66. Delete employee data from employee table who got incentives in incentive table
+delete from employee3 where Emp_id in (select EMP_REF_ID from emp1)
+67. Insert into employee table Last Name with " ' " (Single Quote - Special Character)
+
+
+68. Select Last Name from employee table which contain only numbers
+Select * from employee3 where lower(Lst_Name) = upper(Lst_Name)
+
+ 	Emp_id
+First_Name
+Lst_Name
+Salary
+Joining_date
+Department
+
+ 	  Edit
+  Copy
+  Delete
+4	Dinesh	G	50000	2019-07-09	Insurance
+ 	  Edit
+  Copy
+  Delete
+5	Saibabu	E	40000	2019-12-04	Software
+ 	  Edit
+  Copy
+  Delete
+6	Hasan	S	29000	2019-05-14	Manufacturing
+ 	  Edit
+  Copy
+  Delete
+7	Divya	P	33000	2019-10-02	Healthcare
+ 	  Edit
+  Copy
+  Delete
+8	Aravindhan	R	40000	2019-09-17	Healthcare
+ 	  Edit
+  Copy
+  Delete
+9	Sathish	MD	33000	2019-06-05	Automobile
+ 	  Edit
+  Copy
+  Delete
+12	Prasanth	PKP	34000	2019-04-03	Insurance
+ 	  Edit
+  Copy
+  Delete
+13	Vijay	R	25684	2018-09-14	Business
+ 	  Edit
+  Copy
+  Delete
+14	Sivakumar	K	54789	2019-11-19	Software
+ 	  Edit
+  Copy
+  Delete
+15		Test'	0	0000-00-00	
+
+69. Write a query to rank employees based on their incentives for a month
+
+70. Update incentive table where employee name is 'Dinesh'
+update emp1 set Incentive_Amount = '9000' where EMP_REF_ID =(select EMP_id from employee3 where First_Name = 'Dinesh' )
+
+Emp_REF_ID
+Incentive_Date
+Incentive_Amount
+
+1	2016-02-01	5000	
+2	2015-01-11	3000	
+3	2016-01-04	4000	
+1	2017-02-06	4500	
+2	2018-04-08	3500	
+4	2019-11-20	9000	
+
+
